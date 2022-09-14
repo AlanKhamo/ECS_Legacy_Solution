@@ -7,11 +7,11 @@ namespace ECS.Redesign
         private readonly TempSensor _tempSensor;
         private readonly Heater _heater;
 
-        public ECS(int thr)
+        public ECS(int thr, TempSensor tempSensor, Heater heater)
         {
             SetThreshold(thr);
-            _tempSensor = new TempSensor();
-            _heater = new Heater();
+            _tempSensor = tempSensor;
+            _heater = heater;
         }
 
         public void Regulate()

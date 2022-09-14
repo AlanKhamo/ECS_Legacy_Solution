@@ -5,8 +5,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="C:\Users\Alank\OneDrive\Dokumenter\4.sem\SWT om tir &amp; ons\ECS.cs" Link="ECS.cs" />
-  </ItemGroup>
-
 </Project>

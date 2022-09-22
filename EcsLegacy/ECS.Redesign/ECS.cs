@@ -7,11 +7,11 @@ namespace ECS.Redesign
         private readonly ITempSensor _tempSensor;
         private readonly IHeater _heater;
 
-        public ECS(int thr, ITempSensor tempSensor, IHeater heater)
+        public ECS(int thr, IHeater heater, ITempSensor tempsensor)
         {
-            SetThreshold(thr);
-            _tempSensor = tempSensor;
-            _heater = heater;
+             SetThreshold(thr);
+             _tempSensor = tempsensor;
+             _heater = heater;
         }
 
         public void Regulate()
@@ -43,6 +43,19 @@ namespace ECS.Redesign
         public bool RunSelfTest()
         {
             return _tempSensor.RunSelfTest() && _heater.RunSelfTest();
+        }
+
+
+        public int Window()
+        {
+             if (GetCurTemp() > GetThreshold())
+             {
+                  return 1;
+             }
+             else
+             {
+                  return 0;
+             }
         }
     }
 }

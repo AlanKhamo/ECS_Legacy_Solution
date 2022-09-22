@@ -6,21 +6,21 @@ namespace ECS.Redesign
         public FakeHeater()
         {
         }
-
         public void TurnOn()
         {
-            throw new NotImplementedException();
+             System.Console.WriteLine("Heater is on");
         }
 
         public void TurnOff()
         {
-            throw new NotImplementedException();
+             System.Console.WriteLine("Heater is off");
         }
 
         public bool RunSelfTest()
         {
-            throw new NotImplementedException();
+             return true;
+
         }
-    }
+     }
 }
 

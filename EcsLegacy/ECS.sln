@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECS.Legacy", "ECS.Legacy\ECS.Legacy.csproj", "{04BB7A61-C926-4654-A911-EA7EAE974326}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECS.Legacy", "ECS.Legacy\ECS.Legacy.csproj", "{04BB7A61-C926-4654-A911-EA7EAE974326}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECS.Redesign", "ECS.Redesign\ECS.Redesign.csproj", "{8030FD42-58FA-4791-86E0-60F1ED0E4101}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECS.Redesign", "ECS.Redesign\ECS.Redesign.csproj", "{8030FD42-58FA-4791-86E0-60F1ED0E4101}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject.Test.Unit", "TestProject.Test.Unit\TestProject.Test.Unit.csproj", "{FD6E6AFF-C37E-40CA-A815-7D681B00EE73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8030FD42-58FA-4791-86E0-60F1ED0E4101}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8030FD42-58FA-4791-86E0-60F1ED0E4101}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8030FD42-58FA-4791-86E0-60F1ED0E4101}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD6E6AFF-C37E-40CA-A815-7D681B00EE73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD6E6AFF-C37E-40CA-A815-7D681B00EE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD6E6AFF-C37E-40CA-A815-7D681B00EE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD6E6AFF-C37E-40CA-A815-7D681B00EE73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

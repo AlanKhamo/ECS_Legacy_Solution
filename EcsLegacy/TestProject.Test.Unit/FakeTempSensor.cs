@@ -5,7 +5,7 @@ namespace ECS.Redesign
     {
         public int GetTemp()
         {
-            return 20;
+             return 20;
         }
 
         public bool RunSelfTest()
@@ -14,4 +14,3 @@ namespace ECS.Redesign
         }
     }
 }
-

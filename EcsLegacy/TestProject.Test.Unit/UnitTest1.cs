@@ -9,8 +9,6 @@ namespace TestProject.Test.Unit
           private IHeater _heater;
           private ITempSensor _tempSensor;
 
-
-
           //public ECS.Redesign.ECS uut = new ECS.Redesign.ECS(2, new FakeHeater(), new FakeTempSensor());
 
           [SetUp]
@@ -20,10 +18,9 @@ namespace TestProject.Test.Unit
                _tempSensor = Substitute.For<ITempSensor>();
 
                _uut = new ECS.Redesign.ECS(25, _heater, _tempSensor);
-
           }
 
-          // stubs 1 false
+          // stubs 1 false  // her tjkker vi forskellige cases med true og false 
           [TestCase(true,false,false)]
           [TestCase(false,false, false)]
           [TestCase(true, true, true)]
@@ -36,8 +33,7 @@ namespace TestProject.Test.Unit
                Assert.That(_uut.RunSelfTest(), Is.EqualTo(expected));
           }
 
-
-          // mock
+          // mock // her tjkker vi hvis 24 er mindre end thr som er 25 så skal den tændes med TurnOn()
           [Test]
           public void Regulate_TempBelowThreshold_HeaterTurnedOn()
           {
@@ -47,7 +43,7 @@ namespace TestProject.Test.Unit
 
           }
 
-          // mock
+          // mock // her tjkker vi hvis 26 er større end thr som er 25 så skal den slukkes med TurnOff()
           [Test]
           public void Regulate_HeaterTurnedOn()
           {
@@ -55,8 +51,7 @@ namespace TestProject.Test.Unit
                _uut.Regulate();
                _heater.Received(1).TurnOff();
           }
-
-
+          
           //[Test]
           //public void GetThreshold()
           //{

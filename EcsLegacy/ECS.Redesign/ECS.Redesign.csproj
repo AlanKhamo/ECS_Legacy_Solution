@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NunitXml.TestLogger" Version="3.0.127" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ECS.Legacy\ECS.Legacy.csproj" />
   </ItemGroup>
 

@@ -9,7 +9,7 @@ namespace TestProject.Test.Unit
           private IHeater _heater;
           private ITempSensor _tempSensor;
 
-          //public ECS.Redesign.ECS uut = new ECS.Redesign.ECS(2, new FakeHeater(), new FakeTempSensor());
+          public ECS.Redesign.ECS uut = new ECS.Redesign.ECS(2, new FakeHeater(), new FakeTempSensor());
 
           [SetUp]
           public void Setup()
@@ -20,16 +20,17 @@ namespace TestProject.Test.Unit
                _uut = new ECS.Redesign.ECS(25, _heater, _tempSensor);
           }
 
-          // stubs 1 false  // her tjkker vi forskellige cases med true og false 
-          [TestCase(true,false,false)]
-          [TestCase(false,false, false)]
+          //stubs 1 false  // her tjekker vi forskellige cases med true og false 
+          [TestCase(true, false, false)]
+          [TestCase(false, false, false)]
           [TestCase(true, true, true)]
+
           public void RunSelfTest_TempSensorFails_SelfTestFails(bool p1, bool p2, bool expected)
           {
                _tempSensor.RunSelfTest().Returns(p1);
                _heater.RunSelfTest().Returns(p2);
-
-               Assert.That(_uut.RunSelfTest(),Is.EqualTo(expected));
+               
+               Assert.That(_uut.RunSelfTest(), Is.EqualTo(expected));
                Assert.That(_uut.RunSelfTest(), Is.EqualTo(expected));
           }
 
@@ -37,8 +38,13 @@ namespace TestProject.Test.Unit
           [Test]
           public void Regulate_TempBelowThreshold_HeaterTurnedOn()
           {
+               // setup stub with desired response 
                _tempSensor.GetTemp().Returns(24);
+
+               // Act
                _uut.Regulate();
+
+               // Assert on the mock 
                _heater.Received(1).TurnOn();
 
           }
@@ -51,12 +57,13 @@ namespace TestProject.Test.Unit
                _uut.Regulate();
                _heater.Received(1).TurnOff();
           }
-          
-          //[Test]
-          //public void GetThreshold()
-          //{
-          //     Assert.That(uut.GetThreshold(),Is.EqualTo(2));
-          //}
+
+
+          [Test]
+          public void GetThreshold()
+          {
+               Assert.That(uut.GetThreshold(), Is.EqualTo(2));
+          }
 
 
           //[Test]

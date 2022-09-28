@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,10 +6,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="NunitXml.TestLogger" Version="3.0.127" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ECS.Legacy\ECS.Legacy.csproj" />

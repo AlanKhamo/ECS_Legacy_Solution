@@ -85,10 +85,10 @@ namespace TestProject.Test.Unit
                Assert.That(uut.GetCurTemp(), Is.EqualTo(20));
           }
 
-          [Test]
-          public void Window()
-          {
-               Assert.That(uut.Window(), Is.EqualTo(1));
-          }
+          //[Test]
+          //public void Window()
+          //{
+          //     Assert.That(uut.Window(), Is.EqualTo(1));
+          //}
      }
 }

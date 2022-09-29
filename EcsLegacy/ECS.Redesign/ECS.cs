@@ -46,17 +46,17 @@ namespace ECS.Redesign
         }
 
 
-        public int Window()
-        {
-             if (GetCurTemp() > GetThreshold())
-             {
-                  return 1;
-             }
-             else
-             {
-                  return 0;
-             }
-        }
+        //public int Window()
+        //{
+        //     if (GetCurTemp() > GetThreshold())
+        //     {
+        //          return 1;
+        //     }
+        //     else
+        //     {
+        //          return 0;
+        //     }
+        //}
     }
 }
 

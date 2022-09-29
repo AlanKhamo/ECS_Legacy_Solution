@@ -58,7 +58,6 @@ namespace TestProject.Test.Unit
                _heater.Received(1).TurnOff();
           }
 
-
           [Test]
           public void GetThreshold()
           {
@@ -66,30 +65,30 @@ namespace TestProject.Test.Unit
           }
 
 
-          //[Test]
-          //public void RunSelfTest()
-          //{
-          //     Assert.That(uut.RunSelfTest(), Is.True);
-          //}
+          [Test]
+          public void RunSelfTest()
+          {
+               Assert.That(uut.RunSelfTest(), Is.True);
+          }
 
-          //[Test]
-          //public void SetThreshold()
-          //{
-          //     uut.SetThreshold(2);
-          //     Assert.That(uut.GetThreshold(), Is.EqualTo(2));
-          //}
+          [Test]
+          public void SetThreshold()
+          {
+               uut.SetThreshold(2);
+               Assert.That(uut.GetThreshold(), Is.EqualTo(2));
+          }
 
 
-          //[Test]
-          //public void GetCurTemp()
-          //{
-          //     Assert.That(uut.GetCurTemp(), Is.EqualTo(20));
-          //}
+          [Test]
+          public void GetCurTemp()
+          {
+               Assert.That(uut.GetCurTemp(), Is.EqualTo(20));
+          }
 
-          //[Test]
-          //public void Window()
-          //{
-          //     Assert.That(uut.Window(), Is.EqualTo(1));
-          //}
+          [Test]
+          public void Window()
+          {
+               Assert.That(uut.Window(), Is.EqualTo(1));
+          }
      }
 }
